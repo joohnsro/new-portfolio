@@ -16,12 +16,25 @@ function toggleProfile() {
 }
 
 collapseMenu.addEventListener('click', toggleMenu);
+header.addEventListener('click', toggleMenuFromHeader);
 
-function toggleMenu() {
+function toggleMenu(event) {
     if ( !mobileVersion ) return;
 
     var classList = header.classList;
+
     classList.toggle('open');
+}
+
+function toggleMenuFromHeader(event) {
+    if ( !mobileVersion ) return;
+
+    var target = event.target,
+        classList = header.classList;
+
+    if ( target.classList.contains('mobile', 'open') ){
+        classList.remove('open');
+    }
 }
 
 function checkWindowWidth() {
@@ -31,6 +44,7 @@ function checkWindowWidth() {
         header.classList.add('mobile');
     } else {
         header.classList.remove('mobile');
+        header.classList.remove('open');
     }
 }
 
