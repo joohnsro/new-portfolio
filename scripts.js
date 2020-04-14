@@ -19,6 +19,7 @@ collapseMenu.addEventListener('click', toggleMenu);
 header.addEventListener('click', toggleMenuFromHeader);
 
 function toggleMenu(event) {
+    event.preventDefault();
     if ( !mobileVersion ) return;
 
     var classList = header.classList;
@@ -27,6 +28,7 @@ function toggleMenu(event) {
 }
 
 function toggleMenuFromHeader(event) {
+    event.preventDefault();
     if ( !mobileVersion ) return;
 
     var target = event.target,
