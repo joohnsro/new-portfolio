@@ -69,14 +69,20 @@ function createSrcViewer(){
         element: srcViewer,
 
         show: function() {
+
             var body = document.querySelector('body');
             body.appendChild(srcViewer);
+
+            body.style.overflowY = 'hidden';
         },
 
         buttonClose: closeViewer,
 
         close: function() {
             srcViewer.remove();
+
+            var body = document.querySelector('body');
+            body.style.overflowY = 'auto';
         },
         
         addItem: function( item ) {
@@ -108,7 +114,7 @@ function checkNeedView(){
     
                 var srcViewer = createSrcViewer();
                 srcViewer.addItem( item );
-                srcViewer.show();            
+                srcViewer.show();
                 
                 srcViewer.buttonClose.addEventListener('click', srcViewer.close);
             })

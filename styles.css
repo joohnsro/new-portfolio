@@ -13,7 +13,7 @@
     list-style: none;
 }
 
-html, body {
+body {
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -75,6 +75,7 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     bottom: 0;
     z-index: 4;
+    transition: width .2s;
 }
 
 .container header:not(.mobile):hover {
@@ -252,44 +253,6 @@ body::-webkit-scrollbar-thumb {
     padding: 64px 192px;
 }
 
-.container .content h1 {
-    font-size: 5em;
-    font-weight: 700;
-}
-
-.container .content h2 {
-    font-size: 3em;
-    font-weight: 300;
-}
-
-.container .content h3 {
-    font-size: 2em;
-    font-weight: 700;
-}
-
-.container .content .divisor {
-    margin-bottom: 3.2em;
-}
-
-.container .content p {
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1.6em;
-}
-
-.container .content blockquote {
-    font-size: 1.6em;
-    font-style: italic;
-    font-weight: 300;
-    margin: 2em 0 2em 20%;
-    padding-left: 1em;
-    border-left: 4px solid #ffffff;
-}
-
-.container .content p + p {
-    margin-top: 2em;
-}
-
 @media screen and (max-width: 900px) {
     .container .content,
     .container .content.extended {
@@ -312,6 +275,51 @@ body::-webkit-scrollbar-thumb {
 
 .container .content * + .single {
     margin-top: 64px;
+}
+
+.container .content .single a {
+    color: #ffffff;
+    background-color: #982a36;
+}
+
+.container .content .single h1 {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.container .content .single h2 {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.container .content .single h3 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.container .content .single .divisor {
+    margin-bottom: 3.2em;
+}
+
+.container .content .single p {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+.container .content .single blockquote {
+    font-size: 1.6em;
+    font-style: italic;
+    font-weight: 300;
+    margin: 2em 0 2em 20%;
+    padding-left: 1em;
+    border-left: 4px solid #ffffff;
+}
+
+.container .content .single p + p,
+.container .content .single img + p,
+.container .content .single .caption + p {
+    margin-top: 2em;
 }
 
 .container .content .single img {
@@ -360,7 +368,7 @@ body::-webkit-scrollbar-thumb {
 
 .container .profile {
     width: 100%;
-    padding: 48px 16px 48px 16px;
+    padding: 48px 16px 16px 16px;
     background-color: #282a36;
     border-radius: 8px 8px 8px 8px;
     -moz-border-radius: 8px 8px 8px 8px;
@@ -370,6 +378,10 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+.container .profile.with-social {
+    padding: 48px 16px 48px 16px;
 }
 
 .container .profile .profile-image {
@@ -423,8 +435,9 @@ body::-webkit-scrollbar-thumb {
 .container .profile .profile-image .feather {
     position: absolute;
     stroke: #982a36;
+    top: 50%;
     left: 50%;
-    transform: translateY(75%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
     z-index: 1;
 }
 
@@ -910,7 +923,21 @@ body::-webkit-scrollbar-thumb {
     justify-content: flex-start;
     align-items: center;
     background-color: rgba(0, 0, 0, .75);
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#src-viewer::-webkit-scrollbar {
+    max-width: 10px;
+}
+   
+#src-viewer::-webkit-scrollbar-track {
+    background-color: #382a36;
+}
+
+#src-viewer::-webkit-scrollbar-thumb {
+    background-color: #982a36;
+    outline: 1px solid #982a36;
 }
 
 #src-viewer #close-viewer {
@@ -918,7 +945,7 @@ body::-webkit-scrollbar-thumb {
     top: 32px;
     right: 44px;
     padding: 32px;
-    background-image: url('x-circle.svg');
+    background-image: url('./imgs/x-circle.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -935,4 +962,19 @@ body::-webkit-scrollbar-thumb {
 #src-viewer caption {
     margin-top: 16px;
     color: #ffffff;    
+}
+
+/*
+ * Footer
+ */
+
+footer {
+    width: 100%;
+    flex: 1;
+    padding: 2em 0 0 0;
+    margin-top: 2em;
+    text-align: center;
+    font-size: .9em;
+    color: rgba(255, 255, 255, .5);
+    border-top: 4px solid #282a36;
 }
