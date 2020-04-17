@@ -122,3 +122,27 @@ function checkNeedView(){
     }
 }
 checkNeedView();
+
+function createPopup() {
+
+    return {
+        show: function ( id ) {
+            var popElement = document.querySelector( id );
+
+            if ( popElement ) {
+                var body = document.querySelector('body');
+                var close = document.querySelector(id + ' .popup-close');
+                
+                body.style.overflowY = 'hidden';
+                popElement.style.visibility = 'visible';
+
+                close.addEventListener('click', function() {
+                    body.style.overflowY = 'auto';
+                    popElement.style.visibility = 'hidden';
+                });
+            }
+        }
+    }
+}
+
+//createPopup().show('#popup');
