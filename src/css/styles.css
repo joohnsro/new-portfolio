@@ -280,6 +280,11 @@ body::-webkit-scrollbar-thumb {
 .container .content .single a {
     color: #ffffff;
     background-color: #982a36;
+    transition: filter .2s;
+}
+
+.container .content .single a:hover {
+    filter: brightness(1.4);    
 }
 
 .container .content .single h1 {
@@ -945,7 +950,7 @@ body::-webkit-scrollbar-thumb {
     top: 32px;
     right: 44px;
     padding: 32px;
-    background-image: url('./imgs/x-circle.svg');
+    background-image: url('../imgs/x-circle.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
