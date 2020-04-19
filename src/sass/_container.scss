@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    color: #ffffff;
+    background-color: #21222c;
+
+    section.content-container {
+        flex: 1;
+        min-height: 100%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    
+        .content,
+        section.profile-container {
+            flex: 1;
+        }
+    }
+}
+
+@media screen and ( max-width: 900px ) {
+   .container {
+       position: relative;
+   }
+}

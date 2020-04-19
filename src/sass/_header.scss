@@ -1,0 +1,170 @@
+/*
+  * Header & Menu
+  */
+
+.container header {
+    flex: 1;
+    width: 64px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #282a36;
+    transition: width 1s;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    transition: width .2s;
+
+    &:not(.mobile):hover {
+        width: 192px;
+    }
+
+    .logo,
+    nav {
+        flex: 1;
+        align-content: center;
+        justify-content: space-around;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    a {
+        display: flex;    
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 0;
+        color: #ffffff;
+        font-weight: bold;
+
+        .icon,
+        .text {
+            flex: 1;
+        }
+
+        .icon  {
+            padding: 0 20px;
+            max-width: 64px;
+        }
+
+        .text {
+            padding-left: 12px;
+            text-align: left;
+        }
+    }
+
+    .logo {
+        max-height: 64px;
+        background-color: #ffffff;
+
+        a {
+            font-size: 24px;
+            line-height: 24px;
+            text-align: left;
+            color: #21222c !important;
+            background-color: transparent;
+        }
+
+        svg {
+            stroke: #282a36;
+            transition: transform 2s;
+        }
+        
+        &:hover svg {
+            transform: rotate(360deg);
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-grow: 1;
+
+        ul {
+            display: flex;
+            flex-direction: column;                
+        }
+        
+        a {
+            background-color: transparent;
+            transition: background-color .2s;
+
+            &:hover {
+                background-color: #382a36;
+
+                svg {
+                    stroke: #982a36 !important;
+                }
+            }
+            
+            svg {
+                transition: stroke .2s;
+            }            
+        }               
+    }
+
+    #minimize-menu {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        max-height: 64px;
+        background-color: #282a36;
+    
+        svg {
+            transition: transform .2s;
+        }
+    }
+
+    &:not(.mobile):hover #minimize-menu svg,
+    &.open #minimize-menu svg {
+        transform: rotate(-180deg);
+    }
+}
+
+@media screen and ( max-width: 900px ) {
+    .container header {
+        &.mobile {
+            min-width: 64px;
+            background-color: rgba(0,0,0,0.5);
+            transition: min-width .6s;
+
+            &.open {
+                min-width: 100%;
+                transition: min-width .2s;
+            }
+        }
+    
+        .logo,
+        nav,
+        #minimize-menu {
+            min-width: 192px;
+            max-width: 45vw;
+        }
+    
+        nav,
+        #minimize-menu {
+            background-color: #282a36;
+        }
+    
+        nav {
+            ul li {
+                width: 100%;
+                text-align: center;        
+            }
+            
+            a {
+                flex: 1;
+                width: 100%;
+                text-align: center;
+            }   
+        }
+        
+        #minimize-menu {
+            display: flex;
+        }
+    }
+}

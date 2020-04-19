@@ -1,0 +1,86 @@
+/*
+ * Single
+ */
+
+ .container .content .single {
+    flex: 1;
+}
+
+.container .content * + .single {
+    margin-top: 64px;
+}
+
+.container .content .single a {
+    color: #ffffff;
+    background-color: #982a36;
+    transition: filter .2s;
+}
+
+.container .content .single a:hover {
+    filter: brightness(1.4);    
+}
+
+.container .content .single h1 {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.container .content .single h2 {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.container .content .single h3 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.container .content .single .divisor {
+    margin-bottom: 3.2em;
+}
+
+.container .content .single p {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+.container .content .single blockquote {
+    font-size: 1.6em;
+    font-style: italic;
+    font-weight: 300;
+    margin: 2em 0 2em 20%;
+    padding-left: 1em;
+    border-left: 4px solid #ffffff;
+}
+
+.container .content .single p + p,
+.container .content .single img + p,
+.container .content .single .caption + p {
+    margin-top: 2em;
+}
+
+.container .content .single img {
+    max-width: 100%;
+    margin: 32px auto 0 auto;
+    background-color: #282a36;
+}
+
+.container .content .single img.view {
+    transition: filter .5s;
+    display: flex;
+}
+
+.container .content .single img.view:hover {
+    cursor: pointer;
+    filter: opacity(.5);
+}
+
+.container .content .single .caption {
+    display: flex;
+    margin: 16px 0 0 0;
+    font-size: .9em;
+    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+}
