@@ -17,41 +17,41 @@
     background-color: rgba(0, 0, 0, .75);
     overflow-x: hidden;
     overflow-y: auto;
-}
 
-#src-viewer::-webkit-scrollbar {
-    max-width: 10px;
-}
-   
-#src-viewer::-webkit-scrollbar-track {
-    background-color: #382a36;
-}
-
-#src-viewer::-webkit-scrollbar-thumb {
-    background-color: #982a36;
-    outline: 1px solid #982a36;
-}
-
-#src-viewer #close-viewer {
-    position: fixed;
-    top: 32px;
-    right: 44px;
-    padding: 32px;
-    background-image: url('../../src/imgs/x-circle.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-    z-index: 12;
-}
-
-#src-viewer img,
-#src-viewer iframe,
-#src-viewer video {
-    max-width: 100%;
-}
-
-#src-viewer caption {
-    margin-top: 16px;
-    color: #ffffff;    
+    &::-webkit-scrollbar {
+        max-width: 10px;
+    }
+       
+    &::-webkit-scrollbar-track {
+        background-color: #382a36;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #982a36;
+        outline: 1px solid #982a36;
+    }
+    
+    #close-viewer {
+        position: fixed;
+        top: 32px;
+        right: 44px;
+        padding: 32px;
+        background-image: url('../../src/imgs/x-circle.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        z-index: 12;
+    }
+    
+    img,
+    iframe,
+    video {
+        max-width: 100%;
+    }
+    
+    caption {
+        margin-top: 16px;
+        color: #ffffff;    
+    }
 }
