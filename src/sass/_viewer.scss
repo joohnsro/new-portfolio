@@ -23,12 +23,12 @@
     }
        
     &::-webkit-scrollbar-track {
-        background-color: #382a36;
+        background-color: $primary_color_dark;
     }
     
     &::-webkit-scrollbar-thumb {
-        background-color: #982a36;
-        outline: 1px solid #982a36;
+        background-color: $primary_color;
+        outline: 1px solid $primary_color;
     }
     
     #close-viewer {
@@ -52,6 +52,6 @@
     
     caption {
         margin-top: 16px;
-        color: #ffffff;    
+        color: $text_color;    
     }
 }

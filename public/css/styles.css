@@ -1,6 +1,7 @@
 /*
  * Global
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -540,8 +541,8 @@ body {
     border-radius: 8px 8px 8px 8px;
     -moz-border-radius: 8px 8px 8px 8px;
     -webkit-border-radius: 8px 8px 8px 8px;
-    color: #21222c;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #282a36;
     margin-left: 16px;
     margin-right: 16px;
     display: flex;
@@ -552,7 +553,7 @@ body {
     transition: border .4s;
     border: 4px solid #21222c; }
     .container .boxes-container .box:hover {
-      border-color: #982a36; }
+      border-color: #ffffff; }
     .container .boxes-container .box:first-child {
       margin-left: 0; }
     .container .boxes-container .box:last-child {
@@ -593,26 +594,15 @@ body {
         flex: 1;
         text-align: center;
         font-weight: bold;
-        color: #21222c;
-        background-color: #cccccc;
+        color: #ffffff;
+        background-color: #982a36;
         padding: 16px;
-        border-right: 1px solid #999999;
+        border-right: 1px solid #382a36;
         transition: background-color .5s; }
         .container .boxes-container .box .box-button *:last-child {
           border-right: 0; }
         .container .boxes-container .box .box-button *:hover {
-          background-color: #999999; }
-  .container .boxes-container.dark .box {
-    color: #ffffff;
-    background-color: #282a36; }
-    .container .boxes-container.dark .box:hover {
-      border-color: #ffffff; }
-    .container .boxes-container.dark .box .box-button * {
-      color: #ffffff;
-      background-color: #982a36;
-      border-right: 1px solid #382a36; }
-      .container .boxes-container.dark .box .box-button *:hover {
-        background-color: #382a36; }
+          background-color: #382a36; }
 
 @media screen and (max-width: 900px) {
   .container .boxes-container .boxes-list {

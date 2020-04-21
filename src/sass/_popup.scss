@@ -21,17 +21,17 @@
         flex: 1;
         max-width: 50vw;
         min-height: 100px;
-        background-color: #382a36;
+        background-color: $primary_color_dark;
         position: relative;
 
         .popup-close {
-            color: #ffffff;
+            color: $text_color;
             width: 48px;
             height: 48px;
             position: absolute;
             top: -64px;
             right: -64px;
-            background-color: #982a36;
+            background-color: $primary_color;
             border-radius: 50% 50% 50% 50%;
             -moz-border-radius: 50% 50% 50% 50%;
             -webkit-border-radius: 50% 50% 50% 50%;

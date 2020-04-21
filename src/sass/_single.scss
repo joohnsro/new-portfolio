@@ -6,8 +6,8 @@
     flex: 1;
 
     a {
-        color: #ffffff;
-        background-color: #982a36;
+        color: $text_color;
+        background-color: $primary_color;
         transition: filter .2s;
 
         &:hover {
@@ -52,13 +52,13 @@
         font-weight: 300;
         margin: 2em 0 2em 20%;
         padding-left: 1em;
-        border-left: 4px solid #ffffff;
+        border-left: 4px solid $text_color;
     }  
 
     img {
         max-width: 100%;
         margin: 32px auto 0 auto;
-        background-color: #282a36;
+        background-color: $secondary_color;
 
         &.view {
             transition: filter .5s;
@@ -76,7 +76,7 @@
         margin: 16px 0 0 0;
         font-size: .9em;
         text-align: center;
-        color: #ffffff;
+        color: $text_color;
         justify-content: center;
     }
 }

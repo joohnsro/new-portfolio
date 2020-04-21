@@ -2,7 +2,9 @@
  * Global
  */
 
- * {
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -22,11 +24,11 @@ body {
     }
        
     &::-webkit-scrollbar-track {
-        background-color: #382a36;
+        background-color: $primary_color_dark;
     }
     
     &::-webkit-scrollbar-thumb {
-        background-color: #982a36;
-        outline: 1px solid #982a36;
+        background-color: $primary_color;
+        outline: 1px solid $primary_color;
     }
 }

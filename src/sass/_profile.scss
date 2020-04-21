@@ -19,7 +19,7 @@
     .profile {
         width: 100%;
         padding: 48px 16px 16px 16px;
-        background-color: #282a36;
+        background-color: $secondary_color;
         border-radius: 8px 8px 8px 8px;
         -moz-border-radius: 8px 8px 8px 8px;
         -webkit-border-radius: 8px 8px 8px 8px;
@@ -37,11 +37,11 @@
             width: 64px;
             max-width: 64px;
             height: 64px;
-            border: 4px solid #ffffff;
+            border: 4px solid $text_color;
             border-radius: 50% 50% 50% 50%;
             -moz-border-radius: 50% 50% 50% 50%;
             -webkit-border-radius: 50% 50% 50% 50%;
-            background-color: #382a36;
+            background-color: $primary_color_dark;
             margin: 0 auto;
             position: absolute;
             top: 0;
@@ -63,7 +63,7 @@
             
             .feather {
                 position: absolute;
-                stroke: #982a36;
+                stroke: $primary_color;
                 top: 50%;
                 left: 50%;
                 transform: translateY(-50%) translateX(-50%);
@@ -77,8 +77,8 @@
             border-radius: 50% 50% 50% 50%;
             -moz-border-radius: 50% 50% 50% 50%;
             -webkit-border-radius: 50% 50% 50% 50%;
-            color: #ffffff;
-            background-color: #982a36;
+            color: $text_color;
+            background-color: $primary_color;
             position: absolute;
             top: -24px;
             left: -24px;
@@ -120,7 +120,7 @@
                     display: block;
                     max-width: 30%;
                     height: 2px;
-                    background-color: #ffffff;
+                    background-color: $text_color;
                 }
             }
 
@@ -142,7 +142,7 @@
 
                     .feather {
                         max-width: 42px;
-                        stroke: #ffffff;
+                        stroke: $text_color;
                     }
                     
                     .skill-title {
@@ -154,7 +154,7 @@
                         height: 4px;
 
                         .bar {
-                            background-color: #982a36;
+                            background-color: $primary_color;
                             height: 100%;
 
                             &[data-progress="85"] {
@@ -200,19 +200,19 @@
                         width: 64px;
                         height: 64px;
                         margin: 0 auto;
-                        background-color: #282a36;
-                        border: 4px solid #21222c;
+                        background-color: $secondary_color;
+                        border: 4px solid $secondary_color_dark;
                         border-radius: 50%;
                         -moz-border-radius: 50%;
                         -webkit-border-radius: 50%;
                         transition: background-color .5s;
     
                         &:hover {
-                            background-color: #382a36;
+                            background-color: $primary_color_dark;
                         }
     
                         svg {
-                            stroke: #ffffff;
+                            stroke: $text_color;
                         }
     
                     }

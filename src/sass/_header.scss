@@ -8,7 +8,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #282a36;
+    background-color: $secondary_color;
     transition: width 1s;
     overflow: hidden;
     position: fixed;
@@ -36,7 +36,7 @@
         flex-direction: row;
         align-items: center;
         padding: 20px 0;
-        color: #ffffff;
+        color: $text_color;
         font-weight: bold;
 
         .icon,
@@ -63,12 +63,12 @@
             font-size: 24px;
             line-height: 24px;
             text-align: left;
-            color: #21222c !important;
+            color: $secondary_color_dark !important;
             background-color: transparent;
         }
 
         svg {
-            stroke: #282a36;
+            stroke: $secondary_color;
             transition: transform 2s;
         }
         
@@ -94,10 +94,10 @@
             transition: background-color .2s;
 
             &:hover {
-                background-color: #382a36;
+                background-color: $primary_color_dark;
 
                 svg {
-                    stroke: #982a36 !important;
+                    stroke: $primary_color !important;
                 }
             }
             
@@ -112,7 +112,7 @@
         width: 100%;
         display: flex;
         max-height: 64px;
-        background-color: #282a36;
+        background-color: $secondary_color;
     
         svg {
             transition: transform .2s;
@@ -147,7 +147,7 @@
     
         nav,
         #minimize-menu {
-            background-color: #282a36;
+            background-color: $secondary_color;
         }
     
         nav {
