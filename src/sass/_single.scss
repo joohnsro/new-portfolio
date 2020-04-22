@@ -13,6 +13,41 @@
         &:hover {
             filter: brightness(1.4);    
         }
+
+        &.btn-navigation {
+            display: flex;
+            flex-direction: column;
+            max-width: 33%;
+            padding: 8px 16px;
+            background-color: $secondary_color;
+            cursor: pointer;
+
+            label {
+                display: flex;
+                max-width: 100%;
+                font-size: .7em;
+                font-weight: bold;
+                color: $primary_color;
+                text-transform: uppercase;
+                align-items: center;
+            }
+
+            &.left {
+                float: left;
+                text-align: left;
+                border-right: 4px solid $primary_color;
+            }
+
+            &.right {
+                float: right;
+                border-left: 4px solid $primary_color;
+                text-align: right;
+
+                label {
+                    justify-content: flex-end;
+                }
+            }
+        }
     }
 
     h1 {
@@ -86,7 +121,23 @@
 }
 
 @media screen and (max-width: 900px) {
-    .container .content .single blockquote {
-        font-size: 1.4em;
-    }    
+    .container .content .single {
+        blockquote {
+            font-size: 1.4em;
+        }    
+        
+        a.btn-navigation {
+            max-width: 100%;
+            display: block;
+
+            &.left,
+            &.right {
+                float: unset;
+            }
+
+            & + a.btn-navigation {
+                margin-top: 16px;
+            }
+        }
+    }
 }

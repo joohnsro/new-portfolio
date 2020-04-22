@@ -182,6 +182,31 @@ body {
     transition: filter .2s; }
     .container .content .single a:hover {
       filter: brightness(1.4); }
+    .container .content .single a.btn-navigation {
+      display: flex;
+      flex-direction: column;
+      max-width: 33%;
+      padding: 8px 16px;
+      background-color: #282a36;
+      cursor: pointer; }
+      .container .content .single a.btn-navigation label {
+        display: flex;
+        max-width: 100%;
+        font-size: .7em;
+        font-weight: bold;
+        color: #982a36;
+        text-transform: uppercase;
+        align-items: center; }
+      .container .content .single a.btn-navigation.left {
+        float: left;
+        text-align: left;
+        border-right: 4px solid #982a36; }
+      .container .content .single a.btn-navigation.right {
+        float: right;
+        border-left: 4px solid #982a36;
+        text-align: right; }
+        .container .content .single a.btn-navigation.right label {
+          justify-content: flex-end; }
   .container .content .single h1 {
     font-size: 5em;
     font-weight: 700; }
@@ -231,7 +256,14 @@ body {
 
 @media screen and (max-width: 900px) {
   .container .content .single blockquote {
-    font-size: 1.4em; } }
+    font-size: 1.4em; }
+  .container .content .single a.btn-navigation {
+    max-width: 100%;
+    display: block; }
+    .container .content .single a.btn-navigation.left, .container .content .single a.btn-navigation.right {
+      float: unset; }
+    .container .content .single a.btn-navigation + a.btn-navigation {
+      margin-top: 16px; } }
 /*
  * Profile
  */
