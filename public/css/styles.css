@@ -344,6 +344,10 @@ body {
       width: 100%;
       text-align: left;
       color: rgba(255, 255, 255, 0.5); }
+      .container section.profile-container .profile .profile-description h1 {
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 8px; }
       .container section.profile-container .profile .profile-description .title {
         text-align: center;
         font-weight: bold;
